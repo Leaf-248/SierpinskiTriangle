@@ -10,8 +10,6 @@ public void draw(){
 }
 
 public void sierpinski(double x, double y, double len){
-      double j = Math.random()*1;
-       double s = Math.random()*1-2;
   if(len <= 2)
     triangle((float)x, (float)y, (float)(x+len/2), (float)(y-len), (float)(x+len), (float)y);
   
@@ -20,14 +18,12 @@ public void sierpinski(double x, double y, double len){
     //sierpinski(x, y, len/2);
     //sierpinski(x+len/2+1, y, len/2);
     fill(255, 0, 0);
-
-    sierpinski(x+len/2+0.5, y, len/2);
-    fill(0);
+    sierpinski(x+len/2+1.25, y, len/2);
+    //fill(0);
     sierpinski(x+len/4, y-len/2, len/2);
     fill(0, 0, 255);
-
-    sierpinski(x+len/4-1, y-len/2, len/2);
+    sierpinski(x+len/4-.75, y-len/2, len/2);
     fill(0);
-        sierpinski(x, y, len/2);
+    sierpinski(x, y, len/2);
   }
 }
