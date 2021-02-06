@@ -20,8 +20,8 @@ public void sierpinski(double x, double y, double len){
   else{
     sierpinski(x, y, len/2);
     fill(255, 0, 0);
-    sierpinski(x+len/2, y, len/2);
-    fill(0, 255, 0);
-    sierpinski(x+len/4, y-len/2, len/2);
+    sierpinski(x+len/2+1, y, len/2);
+    fill(0, 0, 255);
+    sierpinski(x+len/4-1, y-len/2, len/2);
   }
 }
